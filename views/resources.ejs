@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<%- include('layouts/pageNavBar') -%>
+  
+  
+<div class="container mt-5 mb-8" style="margin-top: 160px!important;">
+    <div class="container mt-5 mb-5">
+        <div class="card p-3">
+            <h1 class="display-3">ASL Online Resources</h1>
+            <p class="lead">
+                Available resources include downloadable documents that 
+                has inspirations with the deaf community. If you have a 
+                document that you want shared, email 
+                <a href="mailto:stephenbrooks714@gmail.com">support</a>.
+            </p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#basicExampleModal">
+                Open Resources
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ASL Resources</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                            <a href="/assets/asl-learning-resources.docx" download="asl-learning-resources.docx">ASL Learning</a> <br>
+                            <a href="/assets/deaf-culture-resources.docx" download="deaf-culture-resources.docx">
+                                deaf-culture-resources
+                            </a> <br>
+                            <a href="/assets/deaf-empowerment-resources.docx" download="deaf-empowerment-resources.docx">
+                                deaf-empowerment-resources
+                            </a> <br>
+                            <a href="/assets/memoirs-about-deaf-culture-and-deaf-life.docx" download="memoirs-about-deaf-culture-and-deaf-life.docx">
+                                memoirs-about-deaf-culture-and-deaf-life
+                            </a> <br>
+                            <a href="/assets/movies-with-deaf-characters-or-use-asl.docx" download="movies-with-deaf-characters-or-use-asl.docx">
+                                movies-with-deaf-characters-or-use-asl
+                            </a>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="fixed-bottom">
+    <%- include('layouts/footer') -%>
+</div>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

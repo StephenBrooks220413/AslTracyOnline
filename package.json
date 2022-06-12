@@ -1,0 +1,47 @@
+{
+  "name": "asl",
+  "version": "1.0.0",
+  "description": "Sign Language with Tracy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "worker": "node index.js",
+    "postinstall": "echo 'ASL Online With Tracy'"
+  },
+  "ROOT_URL": "www.aslwithtracyonline.org",
+  "keywords": [
+    "blogs",
+    "learning to code",
+    "web development",
+    "coding",
+    "web design",
+    "articles"
+  ],
+  "author": "Stephen Brooks",
+  "email": "stephenbrooks714@gmail.com",
+  "url": "www.clear-web-designs.com",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "express-flash": "^0.0.2",
+    "express-layouts": "^1.0.0",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.4",
+    "mongoose-unique-validator": "^3.1.0",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "^17.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

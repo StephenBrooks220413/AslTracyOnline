@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<%- include('layouts/pageNavBar') -%>
+  
+  
+<div class="container mb-8" style="margin-top: 130px!important; margin-bottom: 80px;">
+    <div>
+    
+        <div class="mt-5 mb-5">
+            <form action="/post/store" method="post" enctype="multipart/form-data">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="username" name="username" class="form-control" />
+                    <label class="form-label">User Name</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="email" name="email" class="form-control" />
+                    <label class="form-label">Email address</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="title" name="title" class="form-control" />
+                    <label class="form-label">Post Title</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="file" id="image" name="image" class="form-control" accept="image/*" />
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                    <textarea class="form-control" required id="message" name="message" rows="4"></textarea>
+                    <label class="form-label">Message</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

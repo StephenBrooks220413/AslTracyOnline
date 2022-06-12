@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<%- include('layouts/pageNavBar') -%>
+  
+  
+<div class="container mb-8" style="margin-top: 130px!important; margin-bottom: 80px;">
+    <h1 class="display-4">ASL Terp Reviews</h1>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/auth/register">Become A Member</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Terps</li>
+                </ol>
+            </nav>
+
+            <%if(loggedIn){%>
+                <p class="lead">
+                    Have a review to share? <a href="/createTerp">Write one.</a>
+                </p>
+            <%}%>
+            <%if(!loggedIn){%>
+                <p class="lead">
+                    Have a review to share? <a href="/auth/login">Sign up or login to write one.</a>
+                </p>
+            <%}%>
+            <div class="row row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center py-1 me-1">
+                <%for(let i = 0; i < terps.length; i ++){%>
+                    <div class="col-md mb-2">
+                        <div class="card hover-zoom m-2 p-3">
+                            <h1>
+                                <%= terps[i].name %>
+                            </h1>
+                            <%if(loggedIn){%>
+                            <p class="lead">
+                                <%= terps[i].description %> <br>
+                                Rated <%= terps[i].rating %> out of 5
+                            </p>
+                            <% } %>
+                            <% if(!loggedIn){ %>
+                            <p class="text-dark">
+                                <a href="/auth/login">Login</a> to see ratings.
+                            </p>
+                            <% } %>
+                            <p>
+                                <%= terps[i].datePosted.toLocaleString()%>
+                            </p>
+                        </div>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+</div>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

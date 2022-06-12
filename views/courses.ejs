@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<%- include('layouts/pageNavBar') -%>
+  
+<div class="container mb-8" style="margin-top: 130px!important; margin-bottom: 80px;">
+    <div class="container mt-5 mb-5">
+        <div>
+            <h1 class="display-6">Tracy's ASL Courses</h1>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                </ol>
+            </nav>
+
+            <div class="container mt-5 mb-5 text-center">
+                <%for(let i = 0; i < courses.length; i ++){%>
+                    <center>
+                        <div class="col-md mb-2">
+                            <div class="hover-zoom m-2 p-3">
+                                <a href="/course/<%= courses[i]._id %>">
+                                    <img src="<%= courses[i].image %>" class="img-fluid max-size" alt="<%= courses[i].title %>">
+                                </a>
+                                <p>
+                                    <%= courses[i].datePosted.toLocaleString()%>
+                                </p>
+                            </div>
+                        </div>
+                    </center>
+                <%}%>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

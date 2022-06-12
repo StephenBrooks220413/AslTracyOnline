@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!-- Main navigation -->
+<header>
+  <!--Navbar-->
+  <%- include('layouts/homePageNav') -%>
+  <!-- Navbar -->
+  <!-- Full Page Intro -->
+  <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('https://media.istockphoto.com/photos/two-young-woman-speak-in-sign-language-picture-id1056692270?k=20&m=1056692270&s=612x612&w=0&h=AgP4zEHe9HA0g9QXJrPqRmKeTTNkN5OzALGZnoerBPQ='); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-12 mb-4 white-text text-center">
+            <h1 class="h1-reponsive red-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+              data-wow-delay="0.3s"><strong>ASL WITH TRACY</strong></h1>
+            <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+            <h5 class="text-uppercase mb-4 red-text wow fadeInDown" data-wow-delay="0.4s">
+              <strong>ASL Teacher, Interviewer, and interpretation.</strong>
+            </h5>
+            <a class="btn btn-danger wow fadeInDown" data-wow-delay="0.4s">portfolio</a>
+            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+
+
+<%- include('components/home/features') -%>      
+
+<div class="author-intro">
+  <div class="container mt-5 mb-8">
+    <div class="row">
+      <div class="col-md mb-1">
+        <h1 class="display-5">ASL With Tracy</h1>
+        <p class="lead">
+          Bring your learning hats and get ready to dig in. From
+          one on one sessions, group classes, to interpreter ratings, Tracy has
+          you covered in all aspects.
+        </p>
+        <a href="https://aslwithtracy.setmore.com/" target="_blank" class="btn btn-outline-danger">Book With Me</a>
+      </div>
+      <div class="col-md mb-3">
+        <p class="text-danger lead">
+          “Please turn on CC”
+        </p>
+        <iframe width="100%" height="386" src="https://www.youtube.com/embed/uq7a6JMfLxE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('components/home/onMobile') -%>
+
+<%- include('components/home/reviews') -%>     
+
+<%- include('components/home/blogs-lessons') -%>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

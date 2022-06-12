@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<%- include('layouts/pageNavBar') -%>
+  
+  
+<div class="container mb-8" style="margin-top: 130px!important; margin-bottom: 80px;">
+    <h1 class="display-4">ASL Articles</h1>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/auth/register">Become A Member</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Posts</li>
+        </ol>
+    </nav>
+
+      
+    <div class="container">
+        <a href="/createPost" class="text-underline">Write</a> an Article
+
+      <div class="row row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center py-1 me-1">
+          <%for(let i = 0; i < blogs.length; i ++){%>
+          <div class="hover-zoom m-5 p-3">
+                <a href="/post/<%= blogs[i]._id %>">
+                    <img src="<%= blogs[i].image %>" class="img-fluid max-size" style="max-height:210px;" alt="<%= blogs[i].title %>">
+                </a>
+                <p>
+                    <%= blogs[i].datePosted.toLocaleString()%>
+                </p>
+          </div>
+          <%}%>
+      </div>
+    </div>
+</div>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

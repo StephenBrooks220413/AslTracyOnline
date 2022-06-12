@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+
+<%- include('layouts/pageNavBar') -%>
+  
+  
+<div class="container mb-8" style="margin-top: 130px!important; margin-bottom: 80px;">
+    <div>
+        <h1 class="display-4">Sign Up</h1>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Register</li>
+            </ol>
+        </nav>
+
+        <p class="lead">
+            Have an account? <a href="/auth/login">Login.</a>
+        </p>
+
+        <div class="mt-5 mb-5">
+            <form action="/users/register" method="post" enctype="multipart/form-data">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="text" id="username" name="username" class="form-control" />
+                    <label class="form-label">User Name</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="email" name="email" class="form-control" />
+                    <label class="form-label">Email address</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="password" name="password" class="form-control" />
+                    <label class="form-label">Password</label>
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                    <textarea class="form-control" required id="about" name="about" rows="4"></textarea>
+                    <label class="form-label">About You</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include('layouts/footer') -%>
+
+<%- include('layouts/scripts') -%>
+
+</body>
+</html>

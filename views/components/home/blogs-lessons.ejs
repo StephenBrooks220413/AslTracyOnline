@@ -1,0 +1,61 @@
+<div class="container mt-5">
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+  
+      <!-- Section heading -->
+      <h2 class="text-center font-weight-bold mb-4 pb-2">Recent posts & lessons</h2>
+      <!-- Section description -->
+      <p class="text-center mx-auto w-responsive mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur veniam.</p>
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center py-1 me-1">
+  
+          <!-- Featured image -->
+          <% for(i=0; i<blogs.length; i++){ %>
+          <div class="rounded m-3">
+            <h4><%= blogs[i].title %></h4>
+            <img class="img-fluid" style="max-height: 220px;" src="<%= blogs[i].image %>" alt="Sample image">
+            <p>
+              Posted On <%= blogs[i].datePosted.toLocaleString() %>
+            </p>
+            <a>
+              <div class="mask rgba-white-slight mt-3" style="max-width: 400px">
+                <p class="text-muted">
+                  <%= blogs[i].message %>
+                </p>
+                <a href="/post/<%= blogs[i]._id %>" class="btn btn-black rounded-pill">Read Post</a>
+              </div>
+            </a>
+          </div>
+          <% } %>
+  
+          <div class="rounded m-3">
+            <h4>First Lesson</h4>
+            <img class="img-fluid" style="max-height: 220px;" src="https://media.istockphoto.com/photos/deaf-talking-in-sign-language-picture-id1283012074?k=20&m=1283012074&s=612x612&w=0&h=eiq6AykRiiUq_o2ge9I7uDJXz2uMAp4vKjqeEUG1iZ4=" alt="Sample image">
+            <p>
+              Created On July 11, 2021
+            </p>
+            <a>
+              <div class="mask rgba-white-slight mt-3" style="max-width: 400px">
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi vitae sit eius natus corporis totam deleniti, quisquam.
+                </p>
+                <a href="#!" class="btn btn-outline-black rounded-pill">Go to lesson</a>
+              </div>
+            </a>
+          </div>
+  
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+  
+      <hr class="my-5">
+      
+    </section>
+    <!--Section: Content-->
+  
+  </div>

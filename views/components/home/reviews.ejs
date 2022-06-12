@@ -1,0 +1,45 @@
+<div class="reviews-bg mt-3 mb-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section class="text-center dark-grey-text p-5">
+        
+        <h6 class="font-weight-normal text-uppercase font-small grey-text mb-4">Testimonials</h6>
+        <!-- Section heading -->
+        <h2 class="font-weight-bold red-text">What customers say about me</h2>
+        <hr class="w-header my-4">
+        <!-- Section description -->
+        <p class="grey-text mx-auto mb-5">
+          Want to share a good experience you had using my service? <a href="/createReview">Write</a> me a review.
+        </p>
+    
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="row row-cols-lg-auto d-flex mx-auto justify-content-center align-items-center text-center py-1 me-1">
+    
+            <% for(i=0; i<reviews.length; i++){ %>
+            <div class="col-md" style="width: 20rem;">
+
+              <img class="card-img rounded-circle" src="<%= reviews[i].image %>" alt="img" />
+              <p class="lead text-danger font-weight-bold">
+                "<%= reviews[i].message %>"
+              </p>
+              <small>Rated her <%= reviews[i].rating %> out of 10</small>
+              <p class="text-muted">
+                Posted by <%= reviews[i].name %> <br>
+                On <%= reviews[i].datePosted.toLocaleString() %>
+              </p>
+            </div>
+            <% } %>
+            
+          </div>
+          <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+        
+      </section>
+      <!--Section: Content-->
+    </div>
+  </div>

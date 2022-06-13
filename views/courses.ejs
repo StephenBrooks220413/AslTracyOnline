@@ -19,15 +19,15 @@
             
             <div class="container mt-5 mb-5 text-center">
                 <a href="/createCourse">Create</a> a course to share.
-                <%for(let i = 0; i < courses.length; i ++){%>
+                <%for(let i = 0; i < CoursePost.length; i ++){%>
                     <center>
                         <div class="col-md mb-2">
                             <div class="hover-zoom m-2 p-3">
-                                <a href="/course/<%= courses[i]._id %>">
-                                    <img src="<%= courses[i].image %>" class="img-fluid max-size" alt="<%= courses[i].title %>">
+                                <a href="/course/<%= CoursePost[i]._id %>">
+                                    <img src="<%= CoursePost[i].image %>" class="img-fluid max-size" alt="<%= CoursePost[i].title %>">
                                 </a>
                                 <p>
-                                    <%= courses[i].datePosted.toLocaleString()%>
+                                    <%= CoursePost[i].datePosted.toLocaleString()%>
                                 </p>
                             </div>
                         </div>

@@ -31,13 +31,13 @@
                 <%for(let i = 0; i < terps.length; i ++){%>
                     <div class="col-md mb-2">
                         <div class="card hover-zoom m-2 p-3">
-                            <h1>
-                                <%= terps[i].name %>
-                            </h1>
+                            <h3>
+                                <%= terps[i].title %>
+                            </h3>
                             <%if(loggedIn){%>
-                            <p class="lead">
-                                <%= terps[i].description %> <br>
-                                Rated <%= terps[i].rating %> out of 5
+                            <p class="lead text-muted">
+                                <%= terps[i].body %> <br>
+                                Email <strong><a href="<%= terps[i].email %>"><%= terps[i].instructor %></a></strong>
                             </p>
                             <% } %>
                             <% if(!loggedIn){ %>

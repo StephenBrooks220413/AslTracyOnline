@@ -1,8 +1,8 @@
-const Courses = require('../models/Courses');
+const Lessons = require('../models/Courses');
 
 module.exports = async (req, res)=>{
-    const courses = await Courses.find({}).limit(40).sort({_id: -1});
+    const CoursePost = await Lessons.find({}).limit(40).sort({_id: -1});
     res.render('courses', {
-        courses
+        CoursePost
     })
 }

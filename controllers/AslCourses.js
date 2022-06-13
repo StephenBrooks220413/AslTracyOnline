@@ -1,4 +1,4 @@
-const Lessons = require('../models/Courses');
+const Lessons = require('../models/AslCourses');
 
 module.exports = async (req, res)=>{
     const CoursePost = await Lessons.find({}).limit(40).sort({_id: -1});

@@ -1,7 +1,7 @@
 const BlogPost = require('../models/Blogs')
 const User = require('../models/User')
 const Review = require('../models/Reviews')
-const Course = require('../models/Courses')
+const Course = require('../models/AslCourses')
 
 module.exports = async (req, res) => {
     const blogs = await BlogPost.find({}).limit(1).sort({_id: -1})

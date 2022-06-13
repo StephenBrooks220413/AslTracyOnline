@@ -1,4 +1,4 @@
-const Lesson = require('../models/Courses');
+const Lesson = require('../models/AslCourses');
 const path = require("path");
 
 module.exports = async (req, res)=>{

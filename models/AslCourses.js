@@ -13,5 +13,5 @@ const CoursesSchema = new Schema({
     email: String
 })
 
-const Courses = mongoose.model('Courses', CoursesSchema);
-module.exports = Courses;
+const AslCourses = mongoose.model('Courses', CoursesSchema);
+module.exports = AslCourses;

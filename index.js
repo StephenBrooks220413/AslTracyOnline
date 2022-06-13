@@ -75,7 +75,7 @@ const singlePostController = require('./controllers/singlePost')
 const storePostController = require('./controllers/storePost')
 ////////////////////////////////////////////////////////////////
 // Course pages
-const coursesController = require('./controllers/courses');
+const coursesController = require('./controllers/AslCourses');
 const newCourseController = require('./controllers/newCourse')
 const singleCourseController = require('./controllers/singleCourse')
 const storeCourseController = require('./controllers/storeCourse')

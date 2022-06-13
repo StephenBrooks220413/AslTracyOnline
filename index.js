@@ -78,11 +78,7 @@ const storePostController = require('./controllers/storePost')
 const coursesController = require('./controllers/courses');
 const newCourseController = require('./controllers/newCourse')
 const singleCourseController = require('./controllers/singleCourse')
-<<<<<<< HEAD
 const storeCourseController = require('./controllers/storeCourse')
-=======
-const storeCourseController = require('./controllers/storeLesson')
->>>>>>> 54a1cb996568b84b906ae5f3901380a627530a41
 /////////////////////////////////////////////////////////////////
 // Terps
 const newTerpsController = require('./controllers/newTerp')

@@ -77,7 +77,7 @@ const storePostController = require('./controllers/storePost')
 // Course pages
 const coursesController = require('./controllers/courses')
 const newCourseController = require('./controllers/newCourse')
-const courseController = require('./controllers/course')
+const singleCourseController = require('./controllers/singleCourse')
 const storeCourseController = require('./controllers/storeLesson')
 /////////////////////////////////////////////////////////////////
 // Terps
@@ -110,7 +110,7 @@ app.get('/singleProfile/:id', singleProfileController)
 ///////////////////////////////////////////////////////
 // Posts
 app.get('/courses', coursesController)
-app.get('/course/:id', courseController)
+app.get('/course/:id', singleCourseController)
 app.get('/createCourse', newCourseController)
 app.post('/course/store', storeCourseController)
 
